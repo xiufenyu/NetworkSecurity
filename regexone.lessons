@@ -1,0 +1,167 @@
+1.  Task: Write a pattern that matches all three row
+Exercise 1: Matching characters
+    Task 	Text 	 
+    match 	abcdefg
+    match 	abcde
+    match 	abc
+
+Answer: abc(de)?(fg)?
+
+
+Task:  Write a pattern that matches all the digits in the strings below
+Exercise 1½: Matching digits
+    Task 	Text 	 
+    match 	abc123xyz 
+    match 	define "123"
+    match 	var g = 123;
+
+Answer: [^\d]*\d{3}[^d]+
+
+
+2. Task:  Write a single pattern that can match the first three strings, but not the last (to be skipped). 
+Exercise 2: Matching with wildcards
+    Task 	Text 	 
+    match 	cat.
+    match 	896.
+    match 	?=+.
+    skip 	abc1
+
+Answer: ...\.
+
+
+3. Task: Write a pattern to match the first three strings, but not the last three strings. 
+Exercise 3: Matching characters
+    Task 	Text 	 
+    match 	can 	
+    match 	man 	
+    match 	fan 	
+    skip 	dan
+    skip 	ran
+    skip 	pan
+
+Answer: [cmf]an
+
+
+4. Write a pattern that matches only the live animals (hog, dog, but not bog). 
+Exercise 4: Excluding characters
+    Task 	Text 	 
+    match 	hog 	
+    match 	dog 	
+    skip 	bog
+
+Answer: [hd]og
+Answer: [^b]og
+
+
+5. Task: Use the bracket notation to match or skip each character from each line. 
+Exercise 5: Matching character ranges
+    Task 	Text 	 
+    match 	Ana 	
+    match 	Bob 	
+    match 	Cpc 	
+    skip 	aax
+    skip 	bby
+    skip 	ccz
+
+Answer: ^[A-C][n-p][a-c]
+
+
+Task: Write a pattern that matches only the first two spellings by using the curly brace notation above.
+6. Exercise 6: Matching repeated characters
+    Task 	Text 	 
+    match 	wazzzzzup 	
+    match 	wazzzup 	
+    skip 	wazup
+
+Answer:  waz{3,5}up
+
+
+7. Write pattern to match a few strings using both the star and plus metacharacters.
+Exercise 7: Matching repeated characters
+    Task 	Text 	 
+    match 	aaaabcc 	
+    match 	aabbbbc 	
+    match 	aacc 	
+    skip 	a
+
+Answer: [abc]{2,}
+Answer: a{2,4}b*c{1,2}
+Answer: a{2,4}b*c+
+
+
+8. Task: Write a pattern that uses the optionality metacharacter to match only the lines where one or more files were found.
+Exercise 8: Matching optional characters
+    Task 	Text 	 
+    match 	1 file found?
+    match 	2 files found?
+    match 	24 files found?
+    skip 	No files found.
+
+Answer: \d+\sfiles?\sfound\?
+
+
+9.  Task: Write a pattern that can match each line containing whitespace characters between the number and the content.
+Exercise 9: Matching whitespaces
+    Task 	Text 	 
+    match 	1.   abc
+    match 	2.	abc
+    match 	3.           abc
+    skip 	4.abc
+
+Answer: [1-3]\.\s+abc
+Answer: \d\.\s+abc
+
+
+10. Task: Try to match each of the strings below using start and end metacharacters.
+Exercise 10: Matching lines
+    Task 	Text 	 
+    match 	Mission: successful
+    skip 	Last Mission: unsuccessful
+    skip 	Next Mission: successful upon capture of target
+
+Answer: ^Mission:\ssuccessful$
+
+
+11. Task: use group to write a regular expression that matches only the filenames (not including extension) of the PDF files below.
+Exercise 11: Matching groups
+    Task 	    Text 	                    Capture Groups 	 
+    capture 	file_record_transcript.pdf 	file_record_transcript
+    capture 	file_07241999.pdf 	        file_07241999
+    skip 	    testfile_fake.pdf.tmp
+
+Answer: ^(file_[\w\d]+_?)\.pdf$
+Answer: (file.+)\.pdf$
+Answer: ^(file.+)\.pdf$
+
+
+12.  Task: Write an expression that matches and captures both the full date, as well as the year of the date.
+Exercise 12: Matching nested groups
+    Task 	    Text 	    Capture Groups 	 
+    capture 	Jan 1987 	Jan 1987 1987 
+    capture 	May 1969 	May 1969 1969
+    capture 	Aug 2011
+
+Answer: (\w{3} (\d{4}))
+Answer: (\w+ (\d+))
+
+
+13. Task: Write an expression to capture the width and height of each display.
+Exercise 13: Matching nested groups
+    Task 	    Text 	    Capture Groups 	 
+    capture 	1280x720 	1280 720
+    capture 	1920x1600 	1920 1600
+    capture 	1024x768
+
+Answer: (\d+)x(\d+)
+
+
+14. Task: Write a conditional pattern that matches only the lines with small fuzzy creatures below.
+    Task 	Text 	 
+    match 	I love cats 
+    match 	I love dogs 
+    skip 	I love logs 
+    skip 	I love cogs
+
+Answer: I love (cats|dogs)
+
+ref: https://regexone.com/lesson/introduction_abcs
