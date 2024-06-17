@@ -20,7 +20,7 @@
 	
 2. Negative lookaheads: specify a pattern that should not be present after the current position \
    Syntax: (?!pattern)   \
-   e.g., -- pcre "/^(?!java)/"  \
+   e.g., -- pcre "/^(?!java)/"
 	
 3. Pipe (|) symbol: Specify multiple patterns by the pipe symbol, allowing you to match any pattern except the ones specified  \
    e.g. ^(?!dog$ | cat$): match any word not dog or cat
