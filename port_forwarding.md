@@ -10,15 +10,15 @@ The way that port forwarding works is you configure an internal IP address on th
 
 # Diagrams 
 1. The remote computers connect to the router with public IP and port number
-![image](./portforwarding_1.png)
+![image](./images/portforwarding_1.png)
 
 
 2. Tell the router how to forward the packets
-![image](./portforwarding_2.png)
+![image](./images/portforwarding_2.png)
 
 
 3. Configure port forwarding in the router
-![image](./portforwarding_3.png)
+![image](./images/portforwarding_3.png)
 
 
 
