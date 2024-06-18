@@ -13,11 +13,11 @@ The way that port forwarding works is you configure an internal IP address on th
 ![image](./images/portforwarding_1.png)
 
 
-2. Tell the router how to forward the packets
+3. Tell the router how to forward the packets
 ![image](./images/portforwarding_2.png)
 
 
-3. Configure port forwarding in the router
+4. Configure port forwarding in the router
 ![image](./images/portforwarding_3.png)
 
 
