@@ -1,0 +1,23 @@
+>>> IPS:
+Done:
+    1. D1
+    2. D2
+
+Todo:
+    D3
+    D4
+    D5
+    Report-1
+    Report-2
+    Slides
+
+
+>>> AppCtrl:
+Done:
+    AppCtrl1 (example.com, TLS, PinkmareVPN, JustTalk, Microsoft_Teams)\
+    AppCtrl2 (Dropbox, ???)
+Todo:
+    AppCtrl3
+    DAC
+    Whitelist
+    Slides
