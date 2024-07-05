@@ -1,0 +1,31 @@
+1.
+a. False positive
+b.
+Todo: Add: parsed_type
+F-SBID( --attack_id 6177; --name "Apple.Daily"; --protocol tcp; --revision 4442; --app_cat 23; --weight 10; --service http; --flow from_client; --pattern "ww1.nextmedia.com"; --context host; --no_case; )
+
+http://ww1.nextmedia.com/?usid=25&utid=7187571021
+
+2.
+a. 
+F-SBID( --attack_id 6064; --name "Yandex.Custom"; --protocol tcp; --app_cat 12; --weight 10; --service http; --flow from_client; --pattern "yandex.com"; --context host; --no_case; )
+
+b.
+Application Category:
+    12 General Interest
+    21 Email
+    22 Storage
+
+Behavior:
+    Reasonable
+
+Technology:
+    Browser-Based
+
+Body (--app_port): 443
+
+
+c.?????????
+Not Working!!!!
+
+3.
