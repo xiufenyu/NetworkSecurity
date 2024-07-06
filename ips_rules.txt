@@ -1,0 +1,53 @@
+# IDS rule version=12.345 2022/12/27 17:53:00  syntax=1  fortios=501
+#########################
+# GROUP: applications3
+F-SGROUP( --name applications3;  )
+#########################
+# drop your signatures below
+# F-SBID( --vuln_id 52286; --attack_id 92807; --name "OpenSSL.X509.Punycode.Buffer.Overflow"; --group applications3; --revision 1; --protocol tcp; --service SSL; --seq <,300,relative; --data_size >512; --pattern "|1603|"; --within 2,packet; --pattern "|06 03 55 1d 1e|"; --distance 0; --pattern "xn--"; --distance 20; --within 10; --no_case; --byte_test 2,>,512,-6,relative; --date 20221114; )
+#
+#
+# D1 - CVE-2023-23074
+# F-SBID( --vuln_id 10001; --attack_id 202323074; --name "Zoho.ServiceDeskPlus.SlideEntityValidatory.InputData.XSS"; --group applications3; --revision 1; --protocol tcp; --flow from_client; --service http; --parsed_type HTTP_POST; --pattern "/api/v3/tour_details"; --context uri; --pattern "input_data="; --context uri; --distance 0; --pattern "|22|slide_detail|22|"; --context uri; --within 50; --pattern "|22|type|22|:|22|embed|22|"; --context uri; --within 200; --pattern "|22|link|22|:"; --context uri; --within 200; --PCRE "/<iframe\s+src=\S\x22(javascript|script)/"; --context uri; --within 100; --date 20240702; )
+#
+#
+# D1 - CVE-2023-34133
+# Filter Bypass
+# F-SBID( --vuln_id 10002; --attack_id 202334133; --name "SonicWall.GMS.Analytics.Webapp.Filter.Bypass.SQL.Injection"; --group applications3; --revision 1; --protocol tcp; --flow from_client; --service http; --parsed_type HTTP_POST; --pattern "/sgms/auth"; --context uri; --pattern "subaction=inherit"; --context uri; --distance 0; --date 20240702; )
+#
+#
+# X-Forwarded-for
+# F-SBID( --vuln_id 10002; --attack_id 202334134; --name "SonicWall.GMS.Analytics.Webapp.XForwardedFor.SQL.Injection"; --group applications3; --revision 1; --protocol tcp; --flow from_client; --service http; --parsed_type HTTP_POST; --pattern "/sgms/auth"; --context uri; --pattern "X-Forwarded-For"; --context header; --no_case;  --pattern "|27|"; --context header; --within 50; --date 20240702; )
+#
+#
+# ws.Endpoint
+# F-SBID( --vuln_id 10002; --attack_id 202334135; --name "SonicWall.GMS.Analytics.Webapp.WS.Endpoint.SQL.Injection"; --group applications3; --revision 1; --protocol tcp; --flow from_client; --service http; --parsed_type HTTP_GET; --pattern "/ws/msw"; --context uri; --pattern "|27|"; --context uri; --within 50; --date 20240702; )
+#
+#
+# D2 - Authentication Bypass (CVE-2023-23752)
+# F-SBID (--vuln_id 20001; --attack_id 202323752; --name "Joomla!.CMS.Webservice.API.Index.PHP.Authentication.Bypass"; --group applications3; --revision 1; --protocol tcp; --flow from_client; --service HTTP; --parsed_type HTTP_GET; --pattern "/api/index.php"; --context uri; --pattern "v1/config/application"; --context uri; --distance 0; --no_case; --pattern "public=true"; --context uri; --within 50; --no_case;)
+#
+# D2 - Stack Overflow ()
+# F-SBID (--vuln_id 20002; --attack_id 20223602; --name "OpenSSL.X509.Certificate.Punycode.Decode.Buffer.Overflow"; --group applications3; --revision 1; --protocol tcp; --data_size >512,payload; --pattern "|16|"; --context packet; --within 1,context; --pattern "|06 03 55 1D 1E|"; --context packet; --pattern "xn--"; --context packet; --PCRE "/[a-zA-Z0-9-]{512,}/"; --context packet; --distance -4; )
+# F-SBID (--vuln_id 20002; --attack_id 20223602; --name "OpenSSL.X509.Certificate.Punycode.Decode.Buffer.Overflow"; --group applications3; --revision 1; --protocol tcp; --data_size >512,payload; --pattern "|16|"; --context packet; --within 1,context; --pattern "|06 03 55 1D 1E|"; --context packet; --pattern "xn--"; --context packet; --PCRE "/[a-z0-9-]{512,}$/"; --context packet; --distance -4; )
+#
+#
+# CVE-2021-3176
+#F-SBID (--vuln_id 20213176; --attack_id 20213176; --name "CVE-2021-3176"; --group applications3; --revision 1; --protocol tcp; --flow from_client; --service http; --parsed_type HTTP_GET; --pattern "/tunnel/link.cgi"; --context uri; --pattern "<script>"; --context uri; --within 200;)
+# F-SBID (--vuln_id 20213176; --attack_id 20213177; --name "CVE-2021-3176"; --group applications3; --revision 1; --protocol tcp; --flow from_client; --service http; --parsed_type HTTP_GET; --pattern "/tunnel/link.cgi"; --context uri; --pattern "<form>|20|action="; --context uri; --within 200; --pattern "/proc/run.cgi"; --context uri; --within 200;)
+#
+#
+#
+#
+#
+# Oracle Stack Overflow
+F-SBID (--vuln_id 2022011910; --attack_id 2022011910; --name "MySQL.Cluster.Management.API.ReportEvent.Buffer.Overflow"; --group applications3; --revision 1; --protocol tcp; --flow from_client; --dst_port 1186; --pattern "report|20|event"; --context packet; --pattern "length:|20|"; --context packet; --distance 0; --byte_test 4,>,25,0,relative;)
+#
+#
+# CVE-2020-5398 (Cannot test it!)
+F-SBID (--vuln_id 20205398; --attack_id 20205398; --name "Spring.MVC.Content.Disposition.Reflected.File.Download"; --group applications3; --revision 1; --protocol tcp; --flow from_client; --service http; --pattern "filename=";--context uri;--PCRE "/[^\x22]+\x2esh\x22/"; --context uri; --distance 0; --pattern "bin/bash"; --context uri; --distance 0; )
+#
+#
+# CVE-2018-18861
+# F-SBID( --vuln_id 47368; --attack_id 72498; --name "PCManFTPD.Server.APPE.Command.Buffer.Overflow"; --group applications3; --protocol tcp;--default_action drop; --revision 14552; --severity critical;  --app Other; --os Windows; --service FTP; --flow from_client; --dst_port 21; --pattern "APPE|20|"; --context packet; --no_case; --within 5,context; --data_size > 1000; --PCRE !"/^([a-zA-Z]:|(\x5c\x5c))?[^\x3c\x3e\x3a\x22\x5c\x7c\x3f\x2a]+$/"; --context packet; --within 1000; --date 20220502;)
+# F-SBID( --vuln_id 47368; --attack_id 72498; --name "PCManFTPD.Server.APPE.Command.Buffer.Overflow"; --group applications3; --protocol tcp;--default_action drop; --revision 14552; --severity critical;  --app Other; --os Windows; --service FTP; --flow from_client; --dst_port 21; --pattern "APPE|20|"; --context packet; --no_case; --within 5,context; --data_size > 1000; --pattern !"|0a|"; --context packet; --within_abs 1000; --date 20220502;)
