@@ -4,10 +4,10 @@ The fundamental **GOAL** of reproducing PoC is to **generate network traffic**!!
 	2. If installing the vulnerable software or setting up the environment is too difficult,  try to **Setup a FAKE server** instead.  Then Execute the PoC. (CVE-2020-5398)       \
 	3. If executing the PoC fail or too difficult:                                                              
  
-	(1) Try to understand the PoC, Adjust the arguments of running PoC.  (CVE-2020-5398)        
+	(1) Try to understand the PoC, Adjust the arguments of running PoC.  (CVE-2020-8592)        
 	(2) Try to understand the PoC, **MAKE CHANGES** to the PoC code.  (CVE-2021-32648)                      
 		a. Delete or comment some code   
-	(3)  **Extract attack payload** from the PoC. Send it to attack the FAKE Server.                            
+	(3)  **Extract attack payload** from the PoC. Use **curl**, **Postman** or **httpie** to create the attack payload. Then Deliver it to attack the FAKE Server.   (CVE-2020-5398)                         
 
 
 # Practice
