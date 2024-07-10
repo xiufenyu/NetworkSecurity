@@ -11,13 +11,17 @@ For network security, the fundamental **GOAL** of reproducing PoC is to **genera
 	3. If executing the PoC fail or too difficult:   
 
   	(1) **Extract attack payload** from the PoC. Use tools (Curl, Postman, httpie) to create the attack payload. Then Deliver it to attack the FAKE Server.   (CVE-2020-5398)    
+
+        (2) Find the **attack payload** online, and BUILD the attack request with tools (Curl, Postman, httpie). DELIVER it to the FAKE Server 
  
-	(2) Try to understand the PoC, Adjust the arguments of running PoC.  (CVE-2020-8592)   
+	(3) Try to understand the PoC, Adjust the arguments of running PoC.  (CVE-2020-8592)   
  
-	(3) Try to understand the PoC, **MAKE CHANGES** to the PoC code.  (CVE-2021-32648)                      
+	(4) Try to understand the PoC, **MAKE CHANGES** to the PoC code.  (CVE-2021-32648)                      
 		a. Delete or comment some code
   
-        (4) Try to undestand the PoC.  **Extract attack payload** from the SCRIPT of the PoC. Use tools (Curl, Postman, httpie) to create the attack payload. Then DELIVER it to attack the FAKE Server.
+        (5) Try to undestand the PoC.  **Extract attack payload** from the SCRIPT of the PoC. Use tools (Curl, Postman, httpie) to create the attack payload. Then DELIVER it to attack the FAKE Server.
+
+ 	
   
 	                     
 
