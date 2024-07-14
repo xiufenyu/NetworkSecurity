@@ -1,7 +1,6 @@
 	# TLS
  ## TLS versions in Handshake
-	1. **Client_hello**:
- 
+1. **Client_hello**:
   ![Client Hello](./images/tls_version_client_hello.png)
   
   (1) TLS Record Layer Version (TLS 1.0)
@@ -12,7 +11,6 @@
 This version is specified in the actual "Client Hello" message and indicates the highest version of the TLS protocol that the client supports and wants to use for this session.
 	
 2. **Server_hello**:
-   
  ![Server Hello](./images/tls_version_server_hello.png)
 
 (1) TLS Record Layer Version (TLS 1.0)
@@ -23,7 +21,6 @@ This version is specified in the actual "Client Hello" message and indicates the
 This version specified inside the "Server Hello" message confirms the version of the protocol that the server has chosen for the session. It indicates that both the server and client will use TLS 1.2 for the secure communication session.
 
 3. **Extension: Supported_versions**
-   
  ![Supported_versions](./images/tls_version_supported_versions.png)
 
 Note: 
