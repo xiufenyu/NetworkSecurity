@@ -1,5 +1,5 @@
 # TLS
- ## TLS versions in Handshake
+## TLS versions in Handshake
 1. **Client_hello** \
   ![Client Hello](./images/tls_version_client_hello.png)
   
@@ -25,5 +25,5 @@ Note:
 This seems to suggest that the client is requesting a TLS 1.2 handshake. In fact, it is — If the server only understands TLS 1.2, it will just negotiate a TLS 1.2 handshake as before. 
 But if that's the case, how does the client advertise to the server that it actually does understand TLS 1.3? Well, the answer is "Extension: Supported_versions".  The Supported_versions notifies the server that the highest version the client is willing to support, but the server is free to negotiate any prior version.
 
-##TLS 1.3##
-In TLS 1.3, everything after the server hello is now encrypted, including the certificate exchange
+## TLS 1.3 ##
+1. In TLS 1.3, everything after the server hello is now encrypted, including the certificate exchange
