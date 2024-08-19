@@ -4,6 +4,8 @@ For network security, the fundamental **GOAL** of reproducing PoC is to **genera
 
 ## Full Reproduction of a PoC
 1. Try to install the vulnerable software,  Execute the PoC
+2. Check whether there is a **Docker Image** or not. If so, install the **Docker Image**
+
 
 ## Partial Reproduction of a PoC (Simulate attacker side only)
 1. If installing the vulnerable software or setting up the environment is too difficult,
