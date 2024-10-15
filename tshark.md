@@ -5,7 +5,12 @@ $ tshark -r Test-001.pcap -Y "tls.handshake.type==1" -T fields -e ip.src -e ip.d
 ```
 
 ```
-tshark -r Test-001.pcap -Y "tls.handshake.type==1" -T fields -e ip.src -e tcp.srcport -e ip.dst -e tcp.dstport -e tls.handshake.extensions_server_name
+$ tshark -r Test-001.pcap -Y "tls.handshake.type==1" -T fields -e ip.src -e tcp.srcport -e ip.dst -e tcp.dstport -e tls.handshake.extensions_server_name
+```
+
+2. Filter SNI
+```
+$ tshark -r Test-001.pcap -Y tls.handshake.extensions_server_name=="www.serpro.gov.br"
 ```
 
 **Note**:   \
