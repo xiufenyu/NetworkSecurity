@@ -2,6 +2,7 @@
 	1. Test different versions of the App. Prefer a recent old version instead of the latest version   \
 	2. Try an EMULATOR if the app crashes in a real phone   \
 	3. Test the FIRST installation and NON-FIRST installation   \
+        4. Test when the Internet is enabled and disabled \
 
 ## Log Analysis
 	1. Analyze LOGS from logcat: understand the logic and code  \
