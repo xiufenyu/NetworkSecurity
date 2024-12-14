@@ -26,6 +26,8 @@
 	1. Start with hardcode values. Verify if domains, Ips, ports are hardcoded   \
 	2. Analysis the app based on OWASP Security   \
 	3. For bypassing anti-debugging/anti-hooking, do STATIC analysis of the JAVA code first.  \
+        4. Check *Resources*, *Assets*. It may have some hardcode values or configure files, such as: server_list.json. \
+
 
 
 # Android Knowledge
