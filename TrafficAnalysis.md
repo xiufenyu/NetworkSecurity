@@ -6,3 +6,7 @@
 	
 ## DNS
 (1) If there is no host name in TLS or UDP protocol, but the hostname has some patterns, we can *detect hostname in DNS request* and block it.
+
+
+## Private Protocols
+(1) Fixed Patterns
