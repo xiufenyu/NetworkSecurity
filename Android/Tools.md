@@ -10,5 +10,5 @@
 |Fridump	| Dump data from memory
 |R2frida	| Inspect memory
 |Objection  ||
-|Mitmproxy  || / burpsuite	Proxy to forward traffic |
-|Ninja  || / Static Analysis |
+|Mitmproxy  | / burpsuite	Proxy to forward traffic |
+|Ninja  | / Static Analysis |
