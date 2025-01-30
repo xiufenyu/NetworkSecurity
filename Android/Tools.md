@@ -1,3 +1,4 @@
+# Android Dynamic Analysis
 |Tool	|Description|
 | ---      | ---       |
 |Frida	    | Reverse Engineering |
@@ -11,4 +12,9 @@
 |R2frida	| Inspect memory
 |Objection  ||
 |Mitmproxy  | burpsuite	Proxy to forward traffic |
-|Ninja  | Reverse Engineering Tool: Static Analysis |
+
+
+# Reverse Engineering
+|Tool	|Description|
+| ---      | ---       |
+|Ninja  | Multiple Platforms: Static Analysis |
