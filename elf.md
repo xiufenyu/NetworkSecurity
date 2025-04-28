@@ -2,7 +2,7 @@
     1. What is elf file?
 ELF is short for **Executable and Linkable Format**. It’s a format used for storing binaries, libraries, and core dumps on disks in Linux and Unix-based systems. Similar with exe in Windows.   
 
-The ELF header is always available in the ELF file, while the Section header table is important during link time to create an executable. On the other hand, the Program header table is useful during runtime to help load the executable into memory.
+The ELF header is always available in the ELF file, while the Section header table is important during *link time* to create an executable. On the other hand, the Program header table is useful during *runtime* to help load the executable into memory.
 
 ## ELF Header
 The ELF header is found at the start of the file. It contains metadata about the file.
@@ -27,10 +27,10 @@ The code and data is divided into contiguous non-overlapping chunks called secti
 The section header stores information about sections. This information is used during dynamic link time, just before the program is executed.
 
 
-## Segment vs Section
-Segments are exclusively use at runtime while sections are exclusively used at link time   
+:bulb: **Tip:** Segments are exclusively use at *runtime* while sections are exclusively used at *link time*.
+
 
 
 ref: 
-[1] https://www.baeldung.com/linux/executable-and-linkable-format-file
-[2] https://gist.github.com/x0nu11byt3/bcb35c3de461e5fb66173071a2379779
+[1] https://www.baeldung.com/linux/executable-and-linkable-format-file     
+[2] https://gist.github.com/x0nu11byt3/bcb35c3de461e5fb66173071a2379779       
