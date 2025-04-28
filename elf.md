@@ -15,7 +15,7 @@ The code and data is divided into contiguous non-overlapping chunks called secti
 
 | Section      | Description                                                    |
 | -------------| ---------------------------------------------------------------|
-| **.symtab**  | symbol table                                                   |
+| <font color="red">**.symtab**</font>| symbol table                            |
 | **.dynsym**  | symbols needed for dynamic-linking                             |
 | **.text**    | is where the main code of the program resides                  |
 | **.bss**     | contains uninitialized data (Type SHT_NOBITS)                  |
