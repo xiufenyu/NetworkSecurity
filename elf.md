@@ -11,13 +11,17 @@ The ELF header is found at the start of the file. It contains metadata about the
 The program header table stores information about segments. Each segment is made up of one or more sections. The kernel uses this information at run time. It tells the kernel how to create the process and map the segments into memory.
 
 ## Section
-The code and data is divided into contiguous non-overlapping chunks called sections.
-**.symtab**: symbol table    
-**.dynsym**: symbols needed for dynamic-linking    
-**.text**: Is where the main code of the program resides    
-**.bss**: It contains uninitialized data (Type SHT_NOBITS).    
-**.data**: Program initialized data, it is writable. (Type SHT_PROGBITS).   
-**.rodata**: It is read-only data, such as strings used by the code.    
+The code and data is divided into contiguous non-overlapping chunks called sections. Important sections:  
+
+| Section      | Description                                                    |
+| -------------| ---------------------------------------------------------------|
+| **.symtab**  | symbol table                                                   |
+| **.dynsym**  | symbols needed for dynamic-linking                             |
+| **.text**    | is where the main code of the program resides                  |
+| **.bss**     | contains uninitialized data (Type SHT_NOBITS)                  |
+| **.data**    | Program initialized data, it is writable. (Type SHT_PROGBITS). |
+| **.rodata**  | It is read-only data, such as strings used by the code.        |
+
 
 ## Section Header
 The section header stores information about sections. This information is used during dynamic link time, just before the program is executed.
