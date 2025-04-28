@@ -13,14 +13,14 @@ The program header table stores information about segments. Each segment is made
 ## Section
 The code and data is divided into contiguous non-overlapping chunks called sections. Important sections:  
 
-| Section      | Description                                                    |
-| -------------| ---------------------------------------------------------------|
-|**.symtab**   | symbol table                                                   |
-| **.dynsym**  | symbols needed for dynamic-linking                             |
-| **.text**    | is where the main code of the program resides                  |
-| **.bss**     | contains uninitialized data (Type SHT_NOBITS)                  |
-| **.data**    | Program initialized data, it is writable. (Type SHT_PROGBITS). |
-| **.rodata**  | It is read-only data, such as strings used by the code.        |
+| Section        | Description                                                    |
+| ---------------| ---------------------------------------------------------------|
+| **_.symtab_**  | symbol table                                                   |
+| **_.dynsym_**  | symbols needed for dynamic-linking                             |
+| **_.text_**    | is where the main code of the program resides                  |
+| **_.bss_**     | contains uninitialized data (Type SHT_NOBITS)                  |
+| **_.data_**    | Program initialized data, it is writable. (Type SHT_PROGBITS). |
+| **_.rodata_**  | It is read-only data, such as strings used by the code.        |
 
 
 ## Section Header
