@@ -6,4 +6,7 @@
 # Fortigate
 1. When Fortigate blocks the traffic, the http status result is **403**.
 
+# VPN
+1. How to check if VPN is working or not?
+   Check MyIP in browser. If the IP is your local ISP address, the VPN fails to connect. In contrast, the VPN is connected if the IP is one of the VPN's IPs.
 
