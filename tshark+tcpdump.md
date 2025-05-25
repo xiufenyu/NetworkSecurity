@@ -1,3 +1,4 @@
+# tshark
 1. Display SNI
 
 ```
@@ -32,3 +33,8 @@ tshark -r <file.pcap> -T fields -e ip.src -e ip.dst -e frame.len | awk '{bytes[$
 
 **Note**:   \
 -Y: the same as **Filter** in Wireshark
+
+# tcpdump
+```
+(host)$ adb shell tcpdump -i wlan0  -s  0  -w  /sdcard/Download/traffic.pcap
+```
